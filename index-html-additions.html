@@ -1,0 +1,21 @@
+<!-- ============================================================
+     ADD THESE 2 LINES inside your <head> tag in index.html
+     ============================================================ -->
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7b2fff">
+
+
+<!-- ============================================================
+     ADD THIS SCRIPT before the closing </body> tag in index.html
+     ============================================================ -->
+
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/pixel-fix-pro/sw.js')
+        .then(reg => console.log('SW registered:', reg.scope))
+        .catch(err => console.error('SW error:', err));
+    });
+  }
+</script>
