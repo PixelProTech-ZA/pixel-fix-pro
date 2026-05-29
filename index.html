@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="_QPgFU8Vg9y-4ZAhoCD7ZFY0DN1yyWxorY1IGg3oNzE" />
 <title>PixelProTech Solutions</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -260,7 +261,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
 .footer-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap}
 .footer-sig{font-family:var(--mono);font-size:10px;color:var(--dimmer);letter-spacing:.5px}
 
-/* SIGNATURE BLOCK (CIPC embedded) */
+/* SIGNATURE BLOCK */
 .sig-block{font-family:var(--mono);font-size:9px;color:rgba(123,47,255,.35);letter-spacing:1.5px;text-align:right;line-height:1.6}
 .sig-block .sig-line{display:block}
 .sig-block .sig-highlight{color:rgba(0,212,170,.4)}
@@ -269,7 +270,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
 .chat-bubble{position:fixed;bottom:24px;right:24px;width:48px;height:48px;background:var(--teal);border-radius:50%;display:grid;place-items:center;cursor:pointer;z-index:200;box-shadow:0 4px 20px rgba(0,212,170,.3)}
 .chat-bubble svg{width:22px;height:22px;stroke:#000;fill:none;stroke-width:2}
 
-/* WATERMARK BUSTER */
 [class*="watermark"],[class*="poweredby"],[class*="branding"],[id*="watermark"]{display:none!important}
 
 @media(max-width:900px){
@@ -491,7 +491,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
       </div>
       <div class="svc-card">
         <div class="svc-img">
-          <svg viewBox="0 0 60 60" fill="none" stroke="#7b2fff" stroke-width="1"><shield cx="30" cy="30" r="20"/><path d="M30 10 L50 20 L50 35 Q50 50 30 55 Q10 50 10 35 L10 20 Z"/></svg>
+          <svg viewBox="0 0 60 60" fill="none" stroke="#7b2fff" stroke-width="1"><path d="M30 10 L50 20 L50 35 Q50 50 30 55 Q10 50 10 35 L10 20 Z"/></svg>
         </div>
         <div class="svc-body">
           <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
@@ -677,21 +677,16 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
         <div class="map-grid"></div>
         <div class="map-hex">
           <svg viewBox="0 0 280 260" fill="none">
-            <!-- hex outline -->
             <polygon points="140,20 240,75 240,185 140,240 40,185 40,75" stroke="#00d4aa" stroke-width="1" fill="rgba(0,212,170,0.04)"/>
-            <!-- inner hex -->
             <polygon points="140,55 210,95 210,175 140,215 70,175 70,95" stroke="rgba(0,212,170,0.3)" stroke-width=".5" stroke-dasharray="4,4" fill="none"/>
-            <!-- JHB dot -->
             <circle cx="100" cy="165" r="8" fill="#7b2fff"/>
             <circle cx="100" cy="165" r="14" stroke="#7b2fff" stroke-width=".5" fill="none" opacity=".4"/>
             <text x="115" y="162" fill="#f0f0f8" font-family="Space Mono,monospace" font-size="10" font-weight="700">Johannesburg</text>
             <text x="115" y="174" fill="#7b2fff" font-family="Space Mono,monospace" font-size="8" letter-spacing="1">PRIMARY HUB</text>
-            <!-- PTA dot -->
             <circle cx="155" cy="110" r="6" fill="#00d4aa"/>
             <circle cx="155" cy="110" r="11" stroke="#00d4aa" stroke-width=".5" fill="none" opacity=".4"/>
             <text x="168" y="107" fill="#f0f0f8" font-family="Space Mono,monospace" font-size="10" font-weight="700">Pretoria</text>
             <text x="168" y="119" fill="#00d4aa" font-family="Space Mono,monospace" font-size="8" letter-spacing="1">SECONDARY HUB</text>
-            <!-- connector -->
             <line x1="100" y1="157" x2="155" y2="118" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="3,3"/>
           </svg>
         </div>
@@ -739,7 +734,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
     <!-- DIAGNOSE TAB -->
     <div id="portal-diagnose" class="portal-section active">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px">
-        <!-- LEFT: live ticket preview -->
         <div>
           <div class="ticket-preview">
             <div class="ticket-header-row">Live Ticket Preview</div>
@@ -759,11 +753,9 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
           </div>
         </div>
 
-        <!-- RIGHT: step flow -->
         <div>
           <div class="progress-bar"><div class="progress-fill" id="prog" style="width:20%"></div></div>
 
-          <!-- STEP 1: Device -->
           <div class="diag-step active" id="ds1">
             <div style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:16px">STEP 01 — SELECT DEVICE</div>
             <div class="diag-grid">
@@ -787,14 +779,12 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
             <button class="submit-btn" onclick="goDS(2)">NEXT →</button>
           </div>
 
-          <!-- STEP 2: Symptom -->
           <div class="diag-step" id="ds2">
             <div style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:16px">STEP 02 — SELECT SYMPTOM</div>
             <div class="diag-grid" id="symptom-grid"></div>
             <button class="submit-btn" onclick="goDS(3)">NEXT →</button>
           </div>
 
-          <!-- STEP 3: Details -->
           <div class="diag-step" id="ds3">
             <div style="font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:1px;margin-bottom:16px">STEP 03 — YOUR DETAILS</div>
             <div class="form-row">
@@ -817,7 +807,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
             </button>
           </div>
 
-          <!-- STEP 4: Quote Result -->
           <div class="diag-step" id="ds4">
             <div class="quote-result" id="qresult">
               <div style="font-family:var(--mono);font-size:10px;color:var(--dimmer);letter-spacing:2px;margin-bottom:12px">ESTIMATED REPAIR COST</div>
@@ -927,7 +916,6 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
 </a>
 
 <script>
-// --- PORTAL LOGIC ---
 const SYMPTOMS={
   'Laptop':['Won\'t power on','Screen cracked / broken','Overheating / loud fan','Slow / freezing','Keyboard not working','Battery not charging','Water damage','WiFi not connecting'],
   'Cellphone':['Screen cracked','Won\'t charge','Water damage','Touchscreen unresponsive','Camera not working','Won\'t turn on','Software issue','Speaker / mic broken'],
@@ -1063,7 +1051,6 @@ function searchRepairs(){
   }).join('');
 }
 
-// Pricing CTA buttons scroll to portal
 function quoteFor(label){
   switchPortal('diagnose');
   document.getElementById('contact').scrollIntoView({behavior:'smooth'});
