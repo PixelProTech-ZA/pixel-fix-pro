@@ -297,6 +297,7 @@ section{padding:100px 5%;position:relative;z-index:1}
 .tl-text-done{color:var(--muted)}
 .tl-text-active{color:var(--purple)}
 .tracker-empty{font-family:var(--mono);font-size:12px;color:var(--dimmer);text-align:center;padding:32px;border:1px solid var(--border);border-radius:8px}
+.port-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
 
 /* FOOTER */
 footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%;position:relative;z-index:1}
@@ -332,6 +333,9 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
 .cred-grid{grid-template-columns:1fr 1fr}
 .footer-top{grid-template-columns:1fr 1fr}
 .who-grid{grid-template-columns:1fr 1fr}
+.port-grid{grid-template-columns:1fr;gap:32px}
+.form-row{grid-template-columns:1fr;gap:0}
+.cred-grid{grid-template-columns:1fr 1fr}
 .nav-links{display:none}
 #network-canvas{opacity:.35}
 }
@@ -638,7 +642,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
         <button onclick="quoteFor('School Support — Custom Quote')" class="price-btn default">Get a Quote</button>
       </div>
     </div>
-    <p class="pricing-note">Managed support and emergency call-outs are available on request — ask when you book.</p>
+    <p class="pricing-note">Replacement parts are quoted separately. No work proceeds without client approval.<br>Managed support and emergency call-outs are available on request — ask when you book.</p>
   </div>
 </section>
 
@@ -713,7 +717,21 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
       <div class="proj-card glass"><div><h4>Computer Laboratory Maintenance</h4><p>Full lab assessment and servicing.</p></div><span class="proj-loc">Pretoria</span></div>
       <div class="proj-card glass"><div><h4>Office Printer Deployment</h4><p>Network printer setup and configuration.</p></div><span class="proj-loc">Midrand</span></div>
     </div>
-    <p class="projects-note">// As genuine work is completed, these are replaced with client-approved case studies.</p>
+    <div class="projects-note">// As genuine work is completed, these are replaced with client-approved case studies.</div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section class="how" id="industries" style="padding-top:0">
+  <div class="section-inner">
+    <span class="hud-tag">// Industries served</span>
+    <h2 class="section-title">Who we work with</h2>
+    <div class="who-grid" style="margin-top:32px">
+      <div class="who-card glass"><span class="who-tag">EDUCATION</span><h4>Schools &amp; Campuses</h4></div>
+      <div class="who-card glass"><span class="who-tag">RETAIL</span><h4>Shops &amp; Retail</h4></div>
+      <div class="who-card glass"><span class="who-tag">PROFESSIONAL</span><h4>Medical, Legal &amp; Accounting Offices</h4></div>
+      <div class="who-card glass"><span class="who-tag">PROPERTY</span><h4>Property Management</h4></div>
+    </div>
   </div>
 </section>
 
@@ -784,7 +802,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
 
     <!-- DIAGNOSE TAB -->
     <div id="portal-diagnose" class="portal-section active">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px">
+      <div class="port-grid">
         <div>
           <div class="ticket-preview glass">
             <div class="ticket-header-row">Live Ticket Preview</div>
@@ -881,7 +899,7 @@ footer{background:var(--dark);border-top:1px solid var(--border);padding:48px 5%
 
     <!-- TRACK TAB -->
     <div id="portal-track" class="portal-section">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px">
+      <div class="port-grid">
         <div>
           <div class="glass" style="padding:24px;font-family:var(--mono);font-size:11px;color:var(--dimmer);line-height:2">
             <div style="color:var(--purple);margin-bottom:10px;letter-spacing:1px">// REPAIR STAGES</div>
